@@ -18,10 +18,21 @@ namespace pryCapelloArticulos
         }
 
         clsRubros objRubros = new clsRubros();
+        clsArticulos objArticulos = new clsArticulos();
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             objRubros.PasarDatosCbo(cboRubros);
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            objArticulos.CargarDgv(dgvArticulos, cboRubros, lblMuestraArticulos, lblMuestraTotal);
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            objArticulos.ExportarArchivo(cboRubros.Text);
         }
     }
 }

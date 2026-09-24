@@ -11,24 +11,25 @@ namespace pryCapelloArticulos
 {
     internal class clsRubros
     {
-       public string Nombre;
-
         public string NombreArchivo = "Rubros.csv";
         public string[] TipoRubro = new string[3];
 
-        StreamReader AD = new StreamReader("../../Archivos/Rubros.csv");
-
         private void LeerArchivo()
         {
+            StreamReader LD = new StreamReader("../../Archivos/Rubros.csv");
+
             for (int i = 0; i < TipoRubro.Length; i++)
             {
-                string datosLeidos = AD.ReadLine();
-
+                string datosLeidos = LD.ReadLine();
+                
                 if (datosLeidos != null)
                 {
                     TipoRubro[i] = datosLeidos;
                 }
             }
+
+            LD.Close();
+            LD.Dispose();
         }
 
         public void PasarDatosCbo(ComboBox cbo)
