@@ -44,6 +44,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblMuestraArticulos = new System.Windows.Forms.Label();
             this.lblMuestraTotal = new System.Windows.Forms.Label();
+            this.linkPerfil = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
@@ -200,11 +201,27 @@
             this.lblMuestraTotal.Size = new System.Drawing.Size(75, 22);
             this.lblMuestraTotal.TabIndex = 7;
             // 
+            // linkPerfil
+            // 
+            this.linkPerfil.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkPerfil.AutoSize = true;
+            this.linkPerfil.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.linkPerfil.LinkColor = System.Drawing.Color.Gray;
+            this.linkPerfil.Location = new System.Drawing.Point(703, 398);
+            this.linkPerfil.Name = "linkPerfil";
+            this.linkPerfil.Size = new System.Drawing.Size(37, 16);
+            this.linkPerfil.TabIndex = 8;
+            this.linkPerfil.TabStop = true;
+            this.linkPerfil.Text = "Perfil";
+            this.linkPerfil.VisitedLinkColor = System.Drawing.Color.Gray;
+            this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 431);
+            this.Controls.Add(this.linkPerfil);
             this.Controls.Add(this.lblMuestraTotal);
             this.Controls.Add(this.lblMuestraArticulos);
             this.Controls.Add(this.lblTotal);
@@ -213,6 +230,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Artículos";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panel1.ResumeLayout(false);
@@ -240,6 +258,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCosto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValorStock;
+        private System.Windows.Forms.LinkLabel linkPerfil;
     }
 }
 

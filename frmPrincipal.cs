@@ -34,5 +34,11 @@ namespace pryCapelloArticulos
         {
             objArticulos.ExportarArchivo(cboRubros.Text);
         }
+
+        private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmPerfil perfil = new frmPerfil();
+            perfil.ShowDialog();
+        }
     }
 }
